@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Movie Guide</title>
+
+  <link rel="stylesheet" href="css/index.css">
+
+  <link rel="icon" type="image/png" sizes="16x16"
+    href="https://www.themoviedb.org/assets/2/favicon-16x16-b362d267873ce9c5a39f686a11fe67fec2a72ed25fa8396c11b71aa43c938b11.png">
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <nav>
+
+    <a class="logo" href="index.html" style="position: absolute; margin-top: 2px;">
+      <img src="/assets/logo.png" alt="The Movie Database (TMDb)" style="width: 130px;
+      height: 40px;">
+    </a>
+
+    <ul style="text-align:center;">
+
+      <li class="">
+        <a class="" href="#"><span class=""> <i class="fas fa-search" id="real"></i></span></a>
+        <a class="" href="#"><span class=""></span></a>
+      </li>
+
+      <li><a class="active" href="" onclick="getChoice('movie/now_playing')">Now Playing</a></li>
+      <li><a href="" onclick="getChoice('movie/popular')">Popular</a></li>
+      <li><a href="" onclick="getChoice('movie/top_rated')">Top Rated</a></li>
+      <li><a href="" onclick="getChoice('movie/upcoming')">Upcoming</a></li>
+      <li><a href="" onclick="getChoice('trending/all/week')">Trending</a></li>
+      <li id="login"><a href="#" onclick="logIn()">LogIn</a></li>
+      <li id="profile"><a href="wishlist.html">Profile</a></li>
+      <li id="logout"><a href="#" onclick="logOut()">LogOut</a></li>
+    </ul>
+  </nav>
+
+  <div class="real-time" id="real-time">
+    <span class="search_icon"> <i class="fas fa-search"></i> </span>
+
+    <input class="" placeholder="Search for a movie, tv show, person......" id="realinputvalue"
+      onkeyup="searchmovie(this.value)">
+  </div>
+
+  <div class="lay">
+    <div class="formcont">
+      <div id="h1">
+        <h1>Login</h1>
+      </div>
+      <div id="loginForm">
+        <div>
+          <label>Username :</label>
+          <input name="username" id="userName" class="inputs" type="text" placeholder="type your user name......"><br>
+          <label>Password :</label>
+          <input name="password" id="password" class="inputs" type="password"
+            placeholder="type your user password..."><br>
+
+          <div class="alert">
+            Wrong Username or Password!
+          </div>
+          <input onclick="checkUser()" id="send" type="submit" value="login">
+          <input onclick="cancel()" id="cancel" type="button" value="cancel">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="search">
+
+    <div class="content_wrapper">
+      <div class="title">
+        <h1>Welcome.</h1>
+        <h3>Millions of movies, TV shows and people to discover. Explore now. </h3>
+      </div>
+      <form class="">
+        <input class="" placeholder="Search for a movie, tv show, person......" id="inputvalue">
+        <button class="search_but" id="search" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="container" id="con" >
+     <!-- <input onkeyup="searchMovie(this.value)" class="searchInp" type="text" placeholder="Write movie here....."> -->
+    <div id="display"></div>
+  </div>
+
+
+
+  <script src="js/jQuery-P.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/cookies.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

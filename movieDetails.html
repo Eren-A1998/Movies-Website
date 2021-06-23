@@ -1,0 +1,70 @@
+<html>
+<head>
+
+    <link rel="stylesheet" href="css/index.css">
+    <title>Details</title>
+</head>
+<body>
+    <nav>
+      <a class="logo" href="index.html" style="position: absolute; margin-top: 2px;">
+        <img src="/assets/logo.png" alt="The Movie Database (TMDb)" style="width: 130px;
+        height: 40px;">
+      </a>
+        <ul style="text-align:center;">
+        <li ><a  class="active" href=""  onclick="getChoice('movie/now_playing')" >Now Playing</a></li>
+        <li ><a href="" onclick="getChoice('movie/popular')" >Popular</a></li>
+        <li ><a href="" onclick="getChoice('movie/top_rated')" >Top Rated</a></li>
+        <li ><a href="" onclick="getChoice('movie/upcoming')" >Upcoming</a></li>
+        <li ><a href="" onclick="getChoice('trending/all/week')" >Trending</a></li>
+        <li id="login" ><a href="#" onclick="logIn()">LogIn</a></li>
+        <li id="profile"><a href="wishlist.html">Profile</a></li>
+        <li id="logout" ><a href="#" onclick="logOut()">LogOut</a></li>
+        </ul>
+    </nav>
+    <div class="lay">
+        <div class="formcont">
+            <div id="h1"><h1>Login</h1></div>
+                <div id="loginForm">
+                        <div>
+                            <label>Username :</label>
+                            <input name="username" id="userName" class="inputs" type="text" placeholder="type your user name......"><br>
+                            <label>Password :</label>
+                            <input name="password" id="password" class="inputs" type="password" placeholder="type your user password..."><br>
+
+                            <div class="alert">
+                              Wrong Username or Password!
+                            </div>
+                            <input onclick="checkUser()" id="send" type="submit" value="login">
+                            <input onclick="cancel()" id="cancel" type="button" value="cancel">
+
+                        </div>
+                </div>
+        </div>
+</div>
+
+    <div id="display"></div>
+
+    <div class="container1">
+
+        <ol id="actors" class="people scroller">
+        </ol>
+    </div>
+    
+    <br>
+    <br>
+    <div id="commentsec">
+      <form id="commentForm" onsubmit="addComment()">
+          <label for="comment" id="lcomm">Write a Comment :</label>
+          <br><br>
+      <textarea name="comment" id="comment" placeholder="write your message here......" cols="100" rows="5"></textarea>
+      <br>
+      <button id="combtn" type="submit">Comment</button>
+      </form>
+    </div>
+
+    <script src="js/jQuery-P.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/cookies.js"></script>
+    <script src="js/details.js"></script>
+</body>
+</html>

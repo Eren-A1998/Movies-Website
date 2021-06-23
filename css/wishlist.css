@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+#welcomusr{
+    background: #032541;
+    /* height: 50px; */
+    padding: 25px 106px;
+    color: white;
+    font-size: 22px;
+    font-family: -webkit-pictograph;
+}
+#welcomusr h1 span{
+    font-family: cursive;
+    padding-left: 10px;
+}
+#wishlp{
+    text-align: center;
+    font-size: 25px;
+    font-family: revert;
+    margin-top: 14px;
+}
+
+.container3{
+    margin: 0 155px;
+}
+
+.img-container3 {
+    float: left;
+    width: 33%;
+    height: 30%;    
+    padding: 10px;
+    border: 10px solid transparent;
+      
+  }
+  .img-container3{
+      position: relative;
+      overflow: hidden;   
+  }
+  .img-container3:hover .overlay{top:0;}
+  
+  .container3::after {
+    content: "";
+    clear: both;
+    display: table;
+    
+  }
+  .overlay { 
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    background-color: white;
+    border-radius: 15px;
+  }
+  
+  .img-container3:hover .overlay {
+    opacity: 0.5;
+  }
+  
+  .text {
+      color:black;
+    font-size: 30px;
+      font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  #rmvbtn{
+    position: relative;
+    top: 280px;
+    left: 120px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    background: black;
+    color: white;
+    outline: none;
+  }
+
+  /*comment section........................................*/
+.commentsec
+{
+    position: relative;
+    margin: 20px 60px;
+    background: #032541;
+    padding: 50px;
+    display: flex;
+      color: white;
+      font-family: cursive;
+}
+.commentsec p {
+  padding-top: 8px;
+}
